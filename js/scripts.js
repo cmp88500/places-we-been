@@ -10,7 +10,7 @@ function Location(city, state, country, date, landmark, notes) {
 }
 
 Location.prototype.title = function() {
-  return this.city + " " + this.state + " " + this.country;
+  return this.city + ", " + this.state + ", " + this.country;
 }
 
 
@@ -29,6 +29,7 @@ $(document).ready(function() {
     var newNotes = $("#notes").val();
 
     var newLocation = new Location(newCity, newState, newCountry, newDate, newLandmark, newNotes);
-    console.log(newLocation);
+
+    $("#location-list").append("<li>" + newLocation.title() + "</li>");
   })
 });
