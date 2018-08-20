@@ -24,7 +24,11 @@ $(document).ready(function() {
     var newCity = $("#city").val();
     var newState = $("#state").val();
     var newCountry = $("#country").val();
+    var newDate = $("#date").val();
+    var newLandmark = $("#landmark").val();
+    var newNotes = $("#notes").val();
 
-    var newLocation = Location(newCity, newState, newCountry, "", "", "");
+    var newLocation = new Location(newCity, newState, newCountry, newDate, newLandmark, newNotes);
+    console.log(newLocation);
   })
 });
