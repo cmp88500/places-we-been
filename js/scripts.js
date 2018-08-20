@@ -4,7 +4,7 @@ function Location(city, state, country, date, landmark, notes) {
   this.city = city;
   this.state = state;
   this.country = country;
-  this.dateVisited = date;
+  this.date = date;
   this.landmark = landmark;
   this.notes = notes;
 }
@@ -29,7 +29,20 @@ $(document).ready(function() {
     var newNotes = $("#notes").val();
 
     var newLocation = new Location(newCity, newState, newCountry, newDate, newLandmark, newNotes);
+    console.log(newLocation.dateVisited);
 
     $("#location-list").append("<li>" + newLocation.title() + "</li>");
-  })
+
+    $("#location-list").last().click(function() {
+      $("#location-full").show();
+      $(".location-name").text(newLocation.title());
+      $(".city").text(newLocation.city);
+      $(".state").text(newLocation.state);
+      $(".country").text(newLocation.country);
+      $(".date").text(newLocation.date);
+      $(".landmark").text(newLocation.landmark);
+      $(".notes").text(newLocation.notes);
+    });
+
+  });
 });

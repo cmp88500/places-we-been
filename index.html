@@ -9,35 +9,56 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="col-md-6">
-      <h2>Places We've Been</h2>
-      <form id="places">
-        <div class="entry">
-          <label for="city">Enter city:</label>
-          <input class="form-control" id="city" type="text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Input</h2>
+          <form id="places">
+            <div class="entry">
+              <label for="city">Enter city:</label>
+              <input class="form-control" id="city" type="text">
+            </div>
+            <div class="entry">
+              <label for="state">Enter state:</label>
+              <input class="form-control" id="state" type="text">
+            </div>
+            <div class="entry">
+              <label for="country">Enter country:</label>
+              <input class="form-control" id="country" type="text">
+            </div>
+            <div class="entry">
+              <label for="date">Enter date visited:</label>
+              <input class="form-control" id="date" type="text">
+            </div>
+            <div class="entry">
+              <label for="landmark">Enter famous landmark in this location:</label>
+              <input class="form-control" id="landmark" type="text">
+            </div>
+            <div class="entry">
+              <label for="notes">Enter miscellaneous notes:</label>
+              <input class="form-control" id="notes" type="text">
+            </div>
+            <button class="m-2" type="submit" id="btn">Submit</button>
+          </form>
+          <h2>Places We've Been</h2>
+          <ul id="location-list">
+          </ul>
         </div>
-        <div class="entry">
-          <label for="state">Enter state:</label>
-          <input class="form-control" id="state" type="text">
+
+
+        <div class="col-md-6">
+
+          <div id="location-full">
+            <h2><span class="location-name"></span></h2>
+              <p>City: <span class="city"></span></p>
+              <p>State: <span class="state"></span></p>
+              <p>Country: <span class="country"></span></p>
+              <p>Date: <span class="date"></span></p>
+              <p>Landmark: <span class="landmark"></span></p>
+              <p>Notes: <span class="notes"></span></p>
+          </div>
         </div>
-        <div class="entry">
-          <label for="country">Enter country:</label>
-          <input class="form-control" id="country" type="text">
-        </div>
-        <div class="entry">
-          <label for="country">Enter date visited:</label>
-          <input class="form-control" id="date" type="text">
-        </div>
-        <div class="entry">
-          <label for="country">Enter famous landmark in this location:</label>
-          <input class="form-control" id="landmark" type="text">
-        </div>
-        <div class="entry">
-          <label for="country">Enter miscellaneous notes:</label>
-          <input class="form-control" id="notes" type="text">
-        </div>
-        <button class="m-2" type="submit" id="btn">Submit</button>
-      </form>
+      </div>
     </div>
   </body>
 </html>
